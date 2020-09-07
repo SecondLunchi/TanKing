@@ -10,7 +10,7 @@ public class Syageki : MonoBehaviour {
     public Transform muzzle;
 
     //tamaの速度
-    public float speed = 10.0f;
+    public float speed = 100.0f;
 
     public AudioClip BulletRazer;
     AudioSource audioSource;
@@ -39,9 +39,10 @@ public class Syageki : MonoBehaviour {
             tamas.GetComponent<Rigidbody>().AddForce(force);
 
             //射撃音
-            audioSource.PlayOneShot(BulletRazer);
+            //audioSource.PlayOneShot(BulletRazer);
         }
 
         
     }
+
 }
