@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class TankControl : MonoBehaviour {
 
+    //発射するtama
     public GameObject tama;
-
     //tamaの位置調整に
     public Transform muzzle;
+    //発射効果音
+    public AudioClip ShotSE;
+    AudioSource audioSource;
 
     //tamaの速度、発射感覚
     [Range(1,12)]
@@ -15,10 +18,6 @@ public class TankControl : MonoBehaviour {
     [Range(0.1f,5)]
     public float TamaDelay = 3.0f;
     float tamadelay;
-
-    //発射効果音
-    public AudioClip BulletRazer;
-    AudioSource audioSource;
 
     //Tankの移動速度、回転速度
     [Range(0,10)]
@@ -61,7 +60,7 @@ public class TankControl : MonoBehaviour {
             tamas.GetComponent<Rigidbody>().AddForce(force);
 
             //射撃音
-            //audioSource.PlayOneShot(BulletRazer);
+            audioSource.PlayOneShot(ShotSE);
         }
 
     //TankのMove関数

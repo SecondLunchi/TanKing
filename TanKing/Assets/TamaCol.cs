@@ -24,11 +24,11 @@ public class TamaCol : MonoBehaviour {
             if (TamaBound > 0) {
                 TamaBound = 0;
             } else {
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }else if (collision.gameObject.tag == "Tank" && collision.gameObject.name != "TankRed") {
             Destroy(collision.gameObject);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
 
     }
