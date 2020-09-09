@@ -13,20 +13,20 @@ public class TankControl : MonoBehaviour {
     AudioSource audioSource;
 
     //tamaの速度、発射感覚
-    [Range(1,12)]
+    [Range(1, 12)]
     public float TamaSpeed = 6.0f;
-    [Range(0.1f,5)]
+    [Range(0.1f, 5)]
     public float TamaDelay = 3.0f;
     float tamadelay;
 
     //Tankの移動速度、回転速度
-    [Range(0,10)]
+    [Range(0, 10)]
     public float TankSpeed = 5f;
-    [Range(0,10)]
+    [Range(0, 10)]
     public float RotateSpeed = 5f;
 
     //発射後反動時間
-    [Range(0,5)]
+    [Range(0, 5)]
     public float HandouRange = 2f;
 
 
@@ -47,21 +47,21 @@ public class TankControl : MonoBehaviour {
 
     //Tamaの発射関数
     void Shot() {
-            //Tamaを複製
-            GameObject tamas = Instantiate(tama) as GameObject;
+        //Tamaを複製
+        GameObject tamas = Instantiate(tama) as GameObject;
 
-            //操作オブジェクトの前方向に速度を掛ける
-            Vector3 force;
-            force = this.gameObject.transform.forward * TamaSpeed * 100;
+        //操作オブジェクトの前方向に速度を掛ける
+        Vector3 force;
+        force = this.gameObject.transform.forward * TamaSpeed * 100;
 
-            //力を加えて発射、及び位置の調整
-            //向き変更時tamas.transform.LookAt(transform.forward);
-            tamas.transform.position = muzzle.position;
-            tamas.GetComponent<Rigidbody>().AddForce(force);
+        //力を加えて発射、及び位置の調整
+        //向き変更時tamas.transform.LookAt(transform.forward);
+        tamas.transform.position = muzzle.position;
+        tamas.GetComponent<Rigidbody>().AddForce(force);
 
-            //射撃音
-            audioSource.PlayOneShot(ShotSE);
-        }
+        //射撃音
+        audioSource.PlayOneShot(ShotSE);
+    }
 
     //TankのMove関数
     void Move() {
@@ -84,6 +84,7 @@ public class TankControl : MonoBehaviour {
                 tamadelay = 0;
             }
         }
+
     }
 }
 

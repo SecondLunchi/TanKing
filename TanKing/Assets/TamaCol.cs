@@ -20,6 +20,10 @@ public class TamaCol : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
 
+        //パルクール追加しろ
+        //
+        //
+
         if (collision.gameObject.tag == "Wall") {
             if (TamaBound > 0) {
                 TamaBound = 0;
@@ -28,6 +32,9 @@ public class TamaCol : MonoBehaviour {
             }
         }else if (collision.gameObject.tag == "Tank" && collision.gameObject.name != "TankRed") {
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if(collision.gameObject.tag == "Soccoer") {
             Destroy(this.gameObject);
         }
 
