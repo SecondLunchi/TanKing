@@ -610,14 +610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eedc7730b1547749befb7d5bcfa3884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tama: {fileID: 6657287097641980480, guid: 323f7eeecad3ed54296c3116507a3ccd, type: 3}
+  tama: {fileID: 6657287097641980480, guid: 53f2be2f525a9654bae0d9c0ade61419, type: 3}
   muzzle: {fileID: 5794502587583032273}
   ShotSE: {fileID: 8300000, guid: 281994fcbb13d954bb854825f748e91c, type: 3}
-  TamaSpeed: 12
-  TamaDelay: 1.98
+  TamaSpeed: 6
+  TamaDelay: 3
   TankSpeed: 5
   RotateSpeed: 5
-  HandouRange: 5
+  HandouRange: 2
 --- !u!82 &6122169455255260408
 AudioSource:
   m_ObjectHideFlags: 0

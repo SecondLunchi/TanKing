@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Soccoer/Soccer.unity
+    guid: 6d83d3c755b4e864bb6341e31b7938ec
   m_configObjects: {}

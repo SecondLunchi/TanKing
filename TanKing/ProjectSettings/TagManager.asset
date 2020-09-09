@@ -7,7 +7,8 @@ TagManager:
   - Tank
   - Wall
   - Tama
-  - Soccoer
+  - Goal
+  - Soccer
   layers:
   - Default
   - TransparentFX

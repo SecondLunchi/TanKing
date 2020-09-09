@@ -543,8 +543,8 @@ GameObject:
   - component: {fileID: 214147716303895133}
   - component: {fileID: 6122169455255260413}
   - component: {fileID: 6122169455255260412}
-  - component: {fileID: 6122169455255260410}
   - component: {fileID: 6122169455255260408}
+  - component: {fileID: 2214895145952672683}
   m_Layer: 0
   m_Name: TankRed
   m_TagString: Tank
@@ -598,26 +598,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6122169455255260410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122169455255260409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eedc7730b1547749befb7d5bcfa3884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tama: {fileID: 6657287097641980480, guid: 323f7eeecad3ed54296c3116507a3ccd, type: 3}
-  muzzle: {fileID: 5794502587583032273}
-  ShotSE: {fileID: 8300000, guid: 281994fcbb13d954bb854825f748e91c, type: 3}
-  TamaSpeed: 12
-  TamaDelay: 1.98
-  TankSpeed: 5
-  RotateSpeed: 5
-  HandouRange: 5
 --- !u!82 &6122169455255260408
 AudioSource:
   m_ObjectHideFlags: 0
@@ -714,6 +694,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2214895145952672683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122169455255260409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67250e45ddb485b4cb2eb1c184d8f8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tama: {fileID: 6657287097641980480, guid: 323f7eeecad3ed54296c3116507a3ccd, type: 3}
+  muzzle: {fileID: 5794502587583032273}
+  ShotSE: {fileID: 8300000, guid: 281994fcbb13d954bb854825f748e91c, type: 3}
+  TamaSpeed: 6
+  TamaDelay: 3
+  TankSpeed: 5
+  RotateSpeed: 5
+  HandouRange: 2
 --- !u!1 &7676133646526515502
 GameObject:
   m_ObjectHideFlags: 0
