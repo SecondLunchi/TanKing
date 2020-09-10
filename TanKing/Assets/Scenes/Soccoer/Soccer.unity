@@ -725,7 +725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633032789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 21}
+  m_LocalPosition: {x: 0, y: 1.5, z: 21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1570920127}
@@ -742,7 +742,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12, y: 4, z: 7}
+  m_Size: {x: 12, y: 1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &633032792
 MonoBehaviour:
@@ -888,7 +888,7 @@ PrefabInstance:
     - target: {fileID: 214147716303895133, guid: 708ac49764fd8c341a070686421735cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 214147716303895133, guid: 708ac49764fd8c341a070686421735cf,
         type: 3}
@@ -949,6 +949,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: RotateSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: TamaDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: HandouRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708ac49764fd8c341a070686421735cf, type: 3}
@@ -1653,7 +1668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235216254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -21}
+  m_LocalPosition: {x: 0, y: 1.5, z: -21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1570920127}
@@ -1670,7 +1685,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12, y: 4, z: 7}
+  m_Size: {x: 12, y: 1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1235216257
 MonoBehaviour:
@@ -1956,7 +1971,7 @@ PrefabInstance:
     - target: {fileID: 214147716303895133, guid: 67d3438451675774bbcc8fe3f4f7359c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 214147716303895133, guid: 67d3438451675774bbcc8fe3f4f7359c,
         type: 3}
@@ -2373,10 +2388,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140144205}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 37, z: 0}
+  m_LocalRotation: {x: 0.41911364, y: 0.5695119, z: -0.41911364, w: 0.5695119}
+  m_LocalPosition: {x: -14.69, y: 39.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 72.7, y: 90, z: 0}
