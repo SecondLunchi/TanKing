@@ -953,17 +953,27 @@ PrefabInstance:
     - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
         type: 3}
       propertyPath: RotateSpeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
         type: 3}
       propertyPath: TamaDelay
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
         type: 3}
       propertyPath: HandouRange
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: TamaSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122169455255260410, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: TankSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708ac49764fd8c341a070686421735cf, type: 3}
@@ -2017,6 +2027,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214895145952672683, guid: 67d3438451675774bbcc8fe3f4f7359c,
+        type: 3}
+      propertyPath: TamaSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214895145952672683, guid: 67d3438451675774bbcc8fe3f4f7359c,
+        type: 3}
+      propertyPath: TamaDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214895145952672683, guid: 67d3438451675774bbcc8fe3f4f7359c,
+        type: 3}
+      propertyPath: TankSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214895145952672683, guid: 67d3438451675774bbcc8fe3f4f7359c,
+        type: 3}
+      propertyPath: RotateSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5794502588687494774, guid: 67d3438451675774bbcc8fe3f4f7359c,
         type: 3}
