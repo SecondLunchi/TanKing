@@ -26,17 +26,17 @@ public class TamaBlue : MonoBehaviour {
 
         if (collision.gameObject.tag == "Wall") {
             if (TamaBound > 0) {
-                TamaBound = 0;
+                TamaBound--;
             } else {
                 Destroy(this.gameObject);
             }
-        }else if (collision.gameObject.tag == "Tank" && collision.gameObject.name != "TankBlue") {
+        } else if (collision.gameObject.tag == "Tank" && collision.gameObject.name != "TankBlue") {
             //Destroy(collision.gameObject);
             Destroy(this.gameObject);
-        }
-        else if(collision.gameObject.tag == "Soccer") {
+        } else if (collision.gameObject.tag == "Soccer") {
             Destroy(this.gameObject);
         }
 
     }
 }
+

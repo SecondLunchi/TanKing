@@ -11,22 +11,33 @@ public class Goal : MonoBehaviour {
     //ゴール点数
     int Goals = 0;
 
-    //複製するボール
-    public GameObject SoccerBall;
+    //ボール
+    GameObject SoccerBall;
 
-    //ボールの消滅と生成の時間
-    public float DesTime = 1.5f;
-    public float SummonTime = 1.5f;
-    float Destime = 0;
-    float Summontime = 0;
+    //待機時間(s)
+    [Range(0,5)]
+    public float SummonTime = 2.5f;
+    float summontime;
+
+    bool summon;
 
     void Start() {
+        SoccerBall = GameObject.FindGameObjectWithTag("Soccer");
 
     }
 
     void Update() {
-        Destime += Time.deltaTime;
-        Summontime += DesTime + Time.deltaTime;
+
+        //Summon処理
+        if (summon) {
+            summontime += Time.deltaTime;
+            if (summontime >= SummonTime) {
+                SoccerBall.SetActive(true);
+                SoccerBall.transform.position = new Vector3(0, 8.5f);
+                summontime = 0;
+                summon = false;
+            }
+        }
 
     }
 
@@ -49,16 +60,8 @@ public class Goal : MonoBehaviour {
     }
 
     void BallSyori(GameObject x) {
-        Destime = 0;
-        Summontime = 0;
-        //while (DesTime - Destime <= 0) {
-            Destroy(x);
-           // Destime = 0;
-       // }
-       // while (SummonTime - Summontime <= 0) {
-            GameObject SoccerBalls = Instantiate(SoccerBall) as GameObject;
-            //Summontime = 0;
-       // }
-        
+        x.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        SoccerBall.SetActive(false);
+        summon = true;
     }
 }

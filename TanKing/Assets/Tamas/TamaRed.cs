@@ -26,7 +26,7 @@ public class TamaRed : MonoBehaviour {
 
         if (collision.gameObject.tag == "Wall") {
             if (TamaBound > 0) {
-                TamaBound = 0;
+                TamaBound --;
             } else {
                 Destroy(this.gameObject);
             }

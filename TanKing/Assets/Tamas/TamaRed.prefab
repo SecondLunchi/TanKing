@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6657287097641980480}
-  m_Material: {fileID: 13400000, guid: 1e5d6ba1708609a4abd06e172bdc9145, type: 2}
+  m_Material: {fileID: 13400000, guid: f5f4b796a3913c3498d351c51c46c5d1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -108,7 +108,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd8916f7fe8c43428652c7069e79e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TamaBound: 1
+  TamaBound: 3
