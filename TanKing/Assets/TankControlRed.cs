@@ -12,6 +12,8 @@ public class TankControlRed : MonoBehaviour {
     public AudioClip ShotSE;
     AudioSource audioSource;
 
+    ParticleSystem Particle;
+
     //tamaの速度、発射感覚
     [Range(1, 12)]
     public float TamaSpeed = 6.0f;
@@ -33,6 +35,7 @@ public class TankControlRed : MonoBehaviour {
     void Start() {
         //コンポーネントを取得
         audioSource = GetComponent<AudioSource>();
+        Particle = GetComponent<ParticleSystem>();
         tamadelay = TamaDelay;
     }
 
@@ -61,23 +64,21 @@ public class TankControlRed : MonoBehaviour {
 
         //射撃音
         audioSource.PlayOneShot(ShotSE);
+
+        Particle.Play();
     }
 
     //TankのMove関数
     void Move() {
         if (Input.GetKey(KeyCode.RightArrow)) {
             this.transform.Rotate(0, RotateSpeed * 10 * Time.deltaTime, 0);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow)) {
+        } else if (Input.GetKey(KeyCode.LeftArrow)) {
             this.transform.Rotate(0, -(RotateSpeed * 10 * Time.deltaTime), 0);
-        }
-        else if (Input.GetKey(KeyCode.UpArrow)) {
+        } else if (Input.GetKey(KeyCode.UpArrow)) {
             this.transform.Translate(0, 0, TankSpeed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow)) {
+        } else if (Input.GetKey(KeyCode.DownArrow)) {
             this.transform.Translate(0, 0, -(TankSpeed * Time.deltaTime));
-        }
-        else if (Input.GetKey(KeyCode.RightShift)) {
+        } else if (Input.GetKey(KeyCode.RightShift)) {
             while (Input.GetKey(KeyCode.RightShift) && TamaDelay - tamadelay <= 0) {
                 Shot();
                 gameObject.GetComponent<Rigidbody>().AddForce(-transform.forward * HandouRange * 100);
@@ -89,4 +90,3 @@ public class TankControlRed : MonoBehaviour {
 }
 
 
- 

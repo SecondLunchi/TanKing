@@ -7,8 +7,11 @@ public class TamaRed : MonoBehaviour {
     //Tamaバウンド回数
     public int TamaBound = 1;
 
+    ParticleSystem Particle;
+
     // Start is called before the first frame update
     void Start() {
+        Particle = GetComponent<ParticleSystem>();
 
     }
 
@@ -20,9 +23,7 @@ public class TamaRed : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
 
-        //パルクール追加しろ
-        //
-        //
+        Particle.Play();
 
         if (collision.gameObject.tag == "Wall") {
             if (TamaBound > 0) {

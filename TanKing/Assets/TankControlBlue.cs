@@ -11,6 +11,8 @@ public class TankControlBlue : MonoBehaviour {
     //発射効果音
     public AudioClip ShotSE;
     AudioSource audioSource;
+    ParticleSystem Particle;
+
 
     //tamaの速度、発射感覚
     [Range(1, 12)]
@@ -33,6 +35,7 @@ public class TankControlBlue : MonoBehaviour {
     void Start() {
         //コンポーネントを取得
         audioSource = GetComponent<AudioSource>();
+        Particle = GetComponent<ParticleSystem>();
         tamadelay = TamaDelay;
     }
 
@@ -61,6 +64,9 @@ public class TankControlBlue : MonoBehaviour {
 
         //射撃音
         audioSource.PlayOneShot(ShotSE);
+
+        Particle.Play();
+
     }
 
     //TankのMove関数
