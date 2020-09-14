@@ -48,7 +48,7 @@ public class TankControl : MonoBehaviourPunCallbacks {
     //Tamaの発射関数
     void Shot() {
         //Tamaを複製
-        GameObject tamas = PhotonNetwork.Instantiate("TankBlue", new Vector3(0, 0), Quaternion.identity, 0) as GameObject;
+        GameObject tamas = PhotonNetwork.Instantiate(tama.name, new Vector3(0, 0), Quaternion.identity);
 
         //操作オブジェクトの前方向に速度を掛ける
         Vector3 force;

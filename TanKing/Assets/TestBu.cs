@@ -17,5 +17,8 @@ public class TestBu : MonoBehaviourPunCallbacks{
         TankControl tankControl = TankBlue.GetComponent<TankControl>();
         tankControl.enabled = true;
     }
+    public void SoccerSummon() {
+        GameObject Soccer = PhotonNetwork.Instantiate("Soccer", new Vector3(0, 8.5f, 0), Quaternion.identity);
+    }
 
 }

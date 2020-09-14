@@ -20,12 +20,16 @@ public class CameraControl : MonoBehaviour {
 
     private void Start() {
         //指定タグ(配列)をターゲットに追加
-        targets.AddRange(GameObject.FindGameObjectsWithTag("Tank"));
-        targets.AddRange(GameObject.FindGameObjectsWithTag("Soccer"));
     }
 
     private void Update() {
         targets.AddRange(GameObject.FindGameObjectsWithTag("Soccer"));
+        targets.AddRange(GameObject.FindGameObjectsWithTag("Tank"));
+        if (Goal.RemoveList) {
+            targets = new List<GameObject>();
+           
+            Goal.RemoveList = false;
+        }
     }
 
     private void Reset() {
