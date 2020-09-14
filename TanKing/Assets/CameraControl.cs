@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 public class CameraControl : MonoBehaviour {
     public Camera cam;
-    public List<Transform> targets;
+
+    //カメラのターゲット
+    public List<GameObject> targets;
 
     public Vector3 offset;
     public float smoothTime = 0.5f;
@@ -14,6 +17,16 @@ public class CameraControl : MonoBehaviour {
     public float zoomLimiter = 50;
 
     private Vector3 velocity;
+
+    private void Start() {
+        //指定タグ(配列)をターゲットに追加
+        targets.AddRange(GameObject.FindGameObjectsWithTag("Tank"));
+        targets.AddRange(GameObject.FindGameObjectsWithTag("Soccer"));
+    }
+
+    private void Update() {
+        targets.AddRange(GameObject.FindGameObjectsWithTag("Soccer"));
+    }
 
     private void Reset() {
         cam = GetComponent<Camera>();
@@ -38,18 +51,18 @@ public class CameraControl : MonoBehaviour {
     }
 
     private float GetGreatestDistance() {
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        var bounds = new Bounds(targets[0].transform.position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++) {
-            bounds.Encapsulate(targets[i].position);
+            bounds.Encapsulate(targets[i].transform.position);
         }
         return bounds.size.x;
     }
 
     private Vector3 GetCenterPoint() {
-        if (targets.Count == 1) return targets[0].position;
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        if (targets.Count == 1) return targets[0].transform.position;
+        var bounds = new Bounds(targets[0].transform.position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++) {
-            bounds.Encapsulate(targets[i].position);
+            bounds.Encapsulate(targets[i].transform.position);
         }
         return bounds.center;
     }

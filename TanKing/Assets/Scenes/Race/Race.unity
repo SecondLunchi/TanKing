@@ -330,6 +330,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 6808656554316993079, guid: 708ac49764fd8c341a070686421735cf,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708ac49764fd8c341a070686421735cf, type: 3}
 --- !u!1 &1689633696
@@ -435,6 +440,7 @@ GameObject:
   - component: {fileID: 1734765907}
   - component: {fileID: 1734765906}
   - component: {fileID: 1734765905}
+  - component: {fileID: 1734765908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -507,6 +513,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734765908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734765904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82c0bf97399a1f4f90b6bc6a1fecfba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1734765906}
+  targets: []
+  offset: {x: 0, y: 1, z: -10}
+  smoothTime: 0.5
+  minZoom: 60
+  maxZoom: 60
+  zoomLimiter: 50
 --- !u!1 &1904549875
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +623,7 @@ Transform:
   m_GameObject: {fileID: 1904549875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
